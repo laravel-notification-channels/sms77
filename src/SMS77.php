@@ -7,7 +7,6 @@ use GuzzleHttp\Client as HttpClient;
 use GuzzleHTtp\Exception\ClientException;
 use NotificationChannels\SMS77\Exceptions\CouldNotSendNotification;
 
-
 class SMS77
 {
     /**
