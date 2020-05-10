@@ -37,5 +37,12 @@
     },
     "config": {
         "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "NotificationChannels\\SMS77\\SMS77ServiceProvider"
+            ]
+        }
     }
 }
