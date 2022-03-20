@@ -7,7 +7,7 @@ class SMS77Message
     protected $payload = [];
 
     /**
-     * @param string $message
+     * @param  string  $message
      */
     public function __construct(string $message = '')
     {
@@ -18,8 +18,7 @@ class SMS77Message
     /**
      * Get the payload value for a given key.
      *
-     * @param string $key
-     *
+     * @param  string  $key
      * @return mixed|null
      */
     public function getPayloadValue(string $key)
@@ -30,7 +29,7 @@ class SMS77Message
     /**
      * Return new SMS77Message object.
      *
-     * @param string $message
+     * @param  string  $message
      */
     public static function create(string $message = ''): self
     {
@@ -60,7 +59,7 @@ class SMS77Message
     /**
      * Set message content.
      *
-     * @param string $message
+     * @param  string  $message
      */
     public function content(string $message): self
     {
@@ -72,7 +71,7 @@ class SMS77Message
     /**
      * Set recipient phone number.
      *
-     * @param string $to
+     * @param  string  $to
      */
     public function to(string $to): self
     {
@@ -84,7 +83,7 @@ class SMS77Message
     /**
      * Set sender name.
      *
-     * @param string $from
+     * @param  string  $from
      */
     public function from(string $from): self
     {
@@ -96,7 +95,7 @@ class SMS77Message
     /**
      * Set notification delay.
      *
-     * @param string $timestamp
+     * @param  string  $timestamp
      */
     public function delay(string $timestamp): self
     {
