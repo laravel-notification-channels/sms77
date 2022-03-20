@@ -25,8 +25,8 @@ class SMS77
     protected $apiKey;
 
     /**
-     * @param string $apiKey
-     * @param HttpClient $http
+     * @param  string  $apiKey
+     * @param  HttpClient  $http
      */
     public function __construct(string $apiKey = null, HttpClient $http = null)
     {
@@ -47,7 +47,7 @@ class SMS77
     /**
      * Set API key.
      *
-     * @param string $apiKey
+     * @param  string  $apiKey
      */
     public function setApiKey(string $apiKey)
     {
@@ -90,7 +90,7 @@ class SMS77
      *
      * @link https://www.sms77.io/en/docs/gateway/http-api/sms-disptach/
      *
-     * @param array $params
+     * @param  array  $params
      */
     public function sendMessage(array $params)
     {

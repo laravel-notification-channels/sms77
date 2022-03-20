@@ -13,7 +13,7 @@ class SMS77Channel
     protected $sms77;
 
     /**
-     * @param SMS77 $sms77
+     * @param  SMS77  $sms77
      */
     public function __construct(SMS77 $sms77)
     {
@@ -23,8 +23,8 @@ class SMS77Channel
     /**
      * Send the given notification.
      *
-     * @param mixed $notifiable
-     * @param \Illuminate\Notifications\Notification $notification
+     * @param  mixed  $notifiable
+     * @param  \Illuminate\Notifications\Notification  $notification
      *
      * @throws \NotificationChannels\SMS77\Exceptions\CouldNotSendNotification
      */
