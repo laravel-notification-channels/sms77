@@ -28,9 +28,9 @@ class SMS77ChannelTest extends TestCase
      */
     protected $expectedResponse = [
         'success' => '100',
-        'debug' =>  'true',
+        'debug' => 'true',
         'sms_type' => 'direct',
-        'messages' =>  [
+        'messages' => [
             'id' => 123,
             'sender' => 'SMS',
             'text' => 'This is my message.',

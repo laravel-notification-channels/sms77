@@ -11,7 +11,8 @@ class SMS77Channel
      * @param  SMS77  $sms77
      */
     public function __construct(protected SMS77 $sms77)
-    {}
+    {
+    }
 
     /**
      * Send the given notification.
