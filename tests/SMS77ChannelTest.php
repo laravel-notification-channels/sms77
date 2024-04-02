@@ -87,26 +87,6 @@ class SMS77ChannelTest extends TestCase
         self::assertSame($this->expectedResponse, $actualResponse);
     }
 
-    public function testSmsSentWithDebugging()
-    {
-        $notification = new TestSmsNotificationWithDebiggung;
-        $notifiable = new TestNotifiable;
-
-        $this->sms77->shouldReceive('sendMessage')->once()
-            ->with([
-                'json' => 1,
-                'debug' => 1,
-                'from' => '5554443333',
-                'to' => '5555555555',
-                'text' => 'This is my message.',
-            ])
-            ->andReturns(new Response(200, [], json_encode($this->expectedResponse)));
-
-        $actualResponse = $this->channel->send($notifiable, $notification);
-
-        self::assertSame($this->expectedResponse, $actualResponse);
-    }
-
     public function testSmsSendWithAllMessageOptions()
     {
         $notification = new TestSmsNotificationWithAllMessageOptions;
@@ -118,7 +98,6 @@ class SMS77ChannelTest extends TestCase
                 'to' => '123456789',
                 'text' => 'This is my message.',
                 'delay' => '000000',
-                'debug' => 1,
                 'no_reload' => 1,
                 'unicode' => 1,
                 'flash' => 1,
@@ -174,7 +153,7 @@ class TestSmsNotificationWithDebiggung extends Notification
 {
     public function toSms77($notifiable)
     {
-        return (new SMS77Message('This is my message.'))->from('5554443333')->debug();
+        return (new SMS77Message('This is my message.'))->from('5554443333');
     }
 }
 
@@ -189,7 +168,6 @@ class TestSmsNotificationWithAllMessageOptions extends Notification
             ->to('123456789')
             ->from('987654321')
             ->delay('00000000')
-            ->debug()
             ->noReload()
             ->unicode()
             ->flash()

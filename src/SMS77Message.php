@@ -115,16 +115,6 @@ class SMS77Message
     }
 
     /**
-     * Activate debug mode.
-     */
-    public function debug(): self
-    {
-        $this->payload['debug'] = 1;
-
-        return $this;
-    }
-
-    /**
      * Set encoding to unicode.
      */
     public function unicode(): self
