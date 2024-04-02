@@ -12,7 +12,7 @@ class SMS77
     /**
      * @var string SMS77 API URL.
      */
-    protected string $apiUrl = 'https://gateway.sms77.io/api/';
+    protected string $apiUrl = 'https://gateway.seven.io/api/';
 
     /**
      * @var HttpClient HTTP Client.
