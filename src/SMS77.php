@@ -15,7 +15,6 @@ class SMS77
      */
     protected string $apiUrl = 'https://gateway.seven.io/api/';
 
-
     /**
      * @param  string  $apiKey
      * @param  HttpClient  $http
@@ -23,8 +22,8 @@ class SMS77
     public function __construct(
         protected string|null $apiKey = null,
         protected HttpClient|null $http = null
-    )
-    {}
+    ) {
+    }
 
     /**
      * Get API key.
@@ -41,7 +40,8 @@ class SMS77
      *
      * @param  string  $apiKey
      */
-    public function setApiKey(string $apiKey): void {
+    public function setApiKey(string $apiKey): void
+    {
         $this->apiKey = $apiKey;
     }
 
