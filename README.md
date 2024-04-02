@@ -1,4 +1,4 @@
-# SMS77 notifications channel for Laravel
+# Seven.io (formerly SMS77) notifications channel for Laravel
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/laravel-notification-channels/sms77.svg?style=flat-square)](https://packagist.org/packages/laravel-notification-channels/sms77)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
@@ -7,7 +7,7 @@
 [![Quality Score](https://img.shields.io/scrutinizer/g/laravel-notification-channels/sms77.svg?style=flat-square)](https://scrutinizer-ci.com/g/laravel-notification-channels/sms77)
 [![Total Downloads](https://img.shields.io/packagist/dt/laravel-notification-channels/sms77.svg?style=flat-square)](https://packagist.org/packages/laravel-notification-channels/sms77)
 
-This package makes it easy to send notifications using [SMS77](https://www.sms77.io/) with Laravel.
+This package makes it easy to send notifications using [Seven.io / SMS77](https://www.seven.io) with Laravel.
 
 ## Contents
 
@@ -31,7 +31,7 @@ This package can be installed via composer:
 
 ### Setting up the SMS77 service
 
-1. Create an account and get the API key [here](https://www.sms77.io)
+1. Create an account and get the API key [here](https://www.seven.io)
 
 2. Add the API key to the `services.php` config file:
 
