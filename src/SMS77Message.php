@@ -4,7 +4,7 @@ namespace NotificationChannels\SMS77;
 
 class SMS77Message
 {
-    protected $payload = [];
+    protected array $payload = [];
 
     /**
      * @param  string  $message
@@ -110,16 +110,6 @@ class SMS77Message
     public function noReload(): self
     {
         $this->payload['no_reload'] = 1;
-
-        return $this;
-    }
-
-    /**
-     * Activate debug mode.
-     */
-    public function debug(): self
-    {
-        $this->payload['debug'] = 1;
 
         return $this;
     }

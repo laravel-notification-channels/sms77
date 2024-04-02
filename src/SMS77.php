@@ -5,6 +5,7 @@ namespace NotificationChannels\SMS77;
 use Exception;
 use GuzzleHttp\Client as HttpClient;
 use GuzzleHTtp\Exception\ClientException;
+use GuzzleHttp\Exception\GuzzleException;
 use NotificationChannels\SMS77\Exceptions\CouldNotSendNotification;
 
 class SMS77
@@ -12,27 +13,18 @@ class SMS77
     /**
      * @var string SMS77 API URL.
      */
-    protected string $apiUrl = 'https://gateway.sms77.io/api/';
+    protected string $apiUrl = 'https://gateway.seven.io/api/';
 
-    /**
-     * @var HttpClient HTTP Client.
-     */
-    protected $http;
-
-    /**
-     * @var null|string SMS77 API Key.
-     */
-    protected $apiKey;
 
     /**
      * @param  string  $apiKey
      * @param  HttpClient  $http
      */
-    public function __construct(string $apiKey = null, HttpClient $http = null)
-    {
-        $this->apiKey = $apiKey;
-        $this->http = $http;
-    }
+    public function __construct(
+        protected string|null $apiKey = null,
+        protected HttpClient|null $http = null
+    )
+    {}
 
     /**
      * Get API key.
@@ -49,8 +41,7 @@ class SMS77
      *
      * @param  string  $apiKey
      */
-    public function setApiKey(string $apiKey)
-    {
+    public function setApiKey(string $apiKey): void {
         $this->apiKey = $apiKey;
     }
 
@@ -72,7 +63,6 @@ class SMS77
      *      'to'                    => '',
      *      'text'                  => '',
      *      'from'                  => '',
-     *      'debug'                 => '',
      *      'delay'                 => '',
      *      'no_reload'             => '',
      *      'unicode'               => '',
@@ -97,6 +87,10 @@ class SMS77
         return $this->sendRequest('sms', $params);
     }
 
+    /**
+     * @throws GuzzleException
+     * @throws CouldNotSendNotification
+     */
     public function sendRequest(string $endpoint, array $params)
     {
         if (empty($this->apiKey)) {

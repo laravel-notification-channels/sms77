@@ -35,7 +35,6 @@ class SMS77MessageTest extends TestCase
     public function testMessageCanReturnPayloadAsArray()
     {
         $message = (new SMS77Message('This is my message.'))
-            ->debug()
             ->from('SMS')
             ->to('123456789')
             ->flash();
@@ -46,7 +45,6 @@ class SMS77MessageTest extends TestCase
             'to' => '123456789',
             'text' => 'This is my message.',
             'flash' => 1,
-            'debug' => 1,
         ];
 
         $this->assertEquals($expected, $message->toArray());
