@@ -1,20 +1,18 @@
-# SMS77 notifications channel for Laravel
+# Seven.io (formerly SMS77) notifications channel for Laravel
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/laravel-notification-channels/sms77.svg?style=flat-square)](https://packagist.org/packages/laravel-notification-channels/sms77)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
-[![Build Status](https://img.shields.io/github/workflow/status/laravel-notification-channels/sms77/PHP%20Composer?style=flat-square)](https://github.com/laravel-notification-channels/sms77/actions) 
+[![Build Status](https://img.shields.io/github/actions/workflow/status/laravel-notification-channels/sms77/php.yml?style=flat-square)](https://github.com/laravel-notification-channels/sms77/actions) 
 [![StyleCI](https://github.styleci.io/repos/259466891/shield?branch=master)](https://github.styleci.io/repos/259466891)
-[![SensioLabsInsight](https://img.shields.io/sensiolabs/i/:sensio_labs_id.svg?style=flat-square)](https://insight.sensiolabs.com/projects/:sensio_labs_id)
 [![Quality Score](https://img.shields.io/scrutinizer/g/laravel-notification-channels/sms77.svg?style=flat-square)](https://scrutinizer-ci.com/g/laravel-notification-channels/sms77)
-[![Code Coverage](https://img.shields.io/scrutinizer/coverage/g/laravel-notification-channels/sms77/master.svg?style=flat-square)](https://scrutinizer-ci.com/g/laravel-notification-channels/sms77/?branch=master)
 [![Total Downloads](https://img.shields.io/packagist/dt/laravel-notification-channels/sms77.svg?style=flat-square)](https://packagist.org/packages/laravel-notification-channels/sms77)
 
-This package makes it easy to send notifications using [SMS77](https://www.sms77.io/) with Laravel.
+This package makes it easy to send notifications using [Seven.io (formerly SMS77)](https://www.seven.io) with Laravel.
 
 ## Contents
 
 - [Installation](#installation)
-	- [Setting up the SMS77 service](#setting-up-the-SMS77-service)
+	- [Setting up the Seven.io service](#setting-up-the-SMS77-service)
 - [Usage](#usage)
 	- [Available Message methods](#available-message-methods)
 - [Changelog](#changelog)
@@ -33,7 +31,7 @@ This package can be installed via composer:
 
 ### Setting up the SMS77 service
 
-1. Create an account and get the API key [here](https://www.sms77.io)
+1. Create an account and get the API key [here](https://www.seven.io)
 
 2. Add the API key to the `services.php` config file:
 
@@ -41,7 +39,7 @@ This package can be installed via composer:
 	// config/services.php
 	...
 	'sms77' => [
-		'api_key' => env('SMS77_API_KEY')
+		'api_key' => env('SEVEN_API_KEY')
 	],
 	...
 	```
