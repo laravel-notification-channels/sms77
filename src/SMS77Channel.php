@@ -8,17 +8,10 @@ use NotificationChannels\SMS77\Exceptions\CouldNotSendNotification;
 class SMS77Channel
 {
     /**
-     * @var SMS77
-     */
-    protected $sms77;
-
-    /**
      * @param  SMS77  $sms77
      */
-    public function __construct(SMS77 $sms77)
-    {
-        $this->sms77 = $sms77;
-    }
+    public function __construct(protected SMS77 $sms77)
+    {}
 
     /**
      * Send the given notification.

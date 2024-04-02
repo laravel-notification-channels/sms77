@@ -4,7 +4,7 @@ namespace NotificationChannels\SMS77;
 
 class SMS77Message
 {
-    protected $payload = [];
+    protected array $payload = [];
 
     /**
      * @param  string  $message
