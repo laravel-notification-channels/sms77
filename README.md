@@ -7,12 +7,12 @@
 [![Quality Score](https://img.shields.io/scrutinizer/g/laravel-notification-channels/sms77.svg?style=flat-square)](https://scrutinizer-ci.com/g/laravel-notification-channels/sms77)
 [![Total Downloads](https://img.shields.io/packagist/dt/laravel-notification-channels/sms77.svg?style=flat-square)](https://packagist.org/packages/laravel-notification-channels/sms77)
 
-This package makes it easy to send notifications using [Seven.io / SMS77](https://www.seven.io) with Laravel.
+This package makes it easy to send notifications using [Seven.io (formerly SMS77)](https://www.seven.io) with Laravel.
 
 ## Contents
 
 - [Installation](#installation)
-	- [Setting up the SMS77 service](#setting-up-the-SMS77-service)
+	- [Setting up the Seven.io service](#setting-up-the-SMS77-service)
 - [Usage](#usage)
 	- [Available Message methods](#available-message-methods)
 - [Changelog](#changelog)
@@ -39,7 +39,7 @@ This package can be installed via composer:
 	// config/services.php
 	...
 	'sms77' => [
-		'api_key' => env('SMS77_API_KEY')
+		'api_key' => env('SEVEN_API_KEY')
 	],
 	...
 	```
