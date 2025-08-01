@@ -1,6 +1,6 @@
 {
     "name": "laravel-notification-channels/sms77",
-    "description": "SMS77 Notifications Channel for Laravel",
+    "description": "Seven Notifications Channel for Laravel",
     "homepage": "https://github.com/laravel-notification-channels/sms77",
     "license": "MIT",
     "authors": [

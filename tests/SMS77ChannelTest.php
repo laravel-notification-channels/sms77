@@ -98,7 +98,6 @@ class SMS77ChannelTest extends TestCase
                 'to' => '123456789',
                 'text' => 'This is my message.',
                 'delay' => '000000',
-                'no_reload' => 1,
                 'unicode' => 1,
                 'flash' => 1,
                 'details' => 1,
@@ -168,7 +167,6 @@ class TestSmsNotificationWithAllMessageOptions extends Notification
             ->to('123456789')
             ->from('987654321')
             ->delay('00000000')
-            ->noReload()
             ->unicode()
             ->flash()
             ->details();

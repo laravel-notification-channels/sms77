@@ -105,16 +105,6 @@ class SMS77Message
     }
 
     /**
-     * Disable reload lock.
-     */
-    public function noReload(): self
-    {
-        $this->payload['no_reload'] = 1;
-
-        return $this;
-    }
-
-    /**
      * Set encoding to unicode.
      */
     public function unicode(): self
