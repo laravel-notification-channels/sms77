@@ -113,14 +113,4 @@ class SMS77Message
 
         return $this;
     }
-
-    /**
-     * The API returns more details about the SMS sent.
-     */
-    public function details(): self
-    {
-        $this->payload['details'] = 1;
-
-        return $this;
-    }
 }

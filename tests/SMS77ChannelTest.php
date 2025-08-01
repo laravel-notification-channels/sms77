@@ -98,7 +98,6 @@ class SMS77ChannelTest extends TestCase
                 'text' => 'This is my message.',
                 'delay' => '000000',
                 'flash' => 1,
-                'details' => 1,
                 'json' => 1,
             ])
             ->andReturns(new Response(200, [], json_encode($this->expectedResponse)));
@@ -165,7 +164,6 @@ class TestSmsNotificationWithAllMessageOptions extends Notification
             ->to('123456789')
             ->from('987654321')
             ->delay('00000000')
-            ->flash()
-            ->details();
+            ->flash();
     }
 }

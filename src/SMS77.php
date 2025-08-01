@@ -67,7 +67,6 @@ class SMS77
      *      'flash'                 => '',
      *      'udh'                   => '',
      *      'ttl'                   => '',
-     *      'details'               => '',
      *      'label'                 => '',
      *      'json'                  => '',
      *      'performance_tracking'  => ''
