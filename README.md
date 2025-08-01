@@ -66,8 +66,7 @@ class InvoicePaid extends Notification
 
     public function toSms77() {
         return (new SMS77Message('Hallo!'))
-        ->from('Max')
-        ->debug();
+        ->from('Max');
     }
 }
 ```
@@ -80,7 +79,6 @@ class InvoicePaid extends Notification
 - `from(string $from)`: Set senders name.
 - `delay(string $timestamp)`: Delays message to given timestamp.
 - `noReload()`: Disables reload lock.
-- `debug()`: Enables debug mode.
 - `unicode()`: Sets message encoding to unicode.
 - `flash()`: Sends SMS as flash message.
 
