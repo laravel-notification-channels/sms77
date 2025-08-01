@@ -11,7 +11,7 @@ use NotificationChannels\SMS77\Exceptions\CouldNotSendNotification;
 class SMS77
 {
     /**
-     * @var string SMS77 API URL.
+     * @var string Seven API URL.
      */
     protected string $apiUrl = 'https://gateway.seven.io/api/';
 
@@ -66,17 +66,15 @@ class SMS77
      *      'delay'                 => '',
      *      'flash'                 => '',
      *      'udh'                   => '',
-     *      'utf8'                  => '',
      *      'ttl'                   => '',
      *      'details'               => '',
-     *      'return_msg_id'         => '',
      *      'label'                 => '',
      *      'json'                  => '',
      *      'performance_tracking'  => ''
      * ];
      * </code>
      *
-     * @link https://www.sms77.io/en/docs/gateway/http-api/sms-disptach/
+     * @link https://docs.seven.io/en/rest-api/endpoints/sms#send-sms
      *
      * @param  array  $params
      */
