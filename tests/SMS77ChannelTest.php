@@ -75,7 +75,6 @@ class SMS77ChannelTest extends TestCase
         $this->sms77->shouldReceive('sendMessage')->once()
             ->with([
                 'json' => 1,
-                'unicode' => 1,
                 'from' => '5554443333',
                 'to' => '5555555555',
                 'text' => 'This is my message.',
@@ -98,7 +97,6 @@ class SMS77ChannelTest extends TestCase
                 'to' => '123456789',
                 'text' => 'This is my message.',
                 'delay' => '000000',
-                'unicode' => 1,
                 'flash' => 1,
                 'details' => 1,
                 'json' => 1,
@@ -141,7 +139,7 @@ class TestSmsNotificationWithCustomFrom extends Notification
 {
     public function toSms77($notifiable)
     {
-        return (new SMS77Message('This is my message.'))->from('5554443333')->unicode();
+        return (new SMS77Message('This is my message.'))->from('5554443333');
     }
 }
 
@@ -167,7 +165,6 @@ class TestSmsNotificationWithAllMessageOptions extends Notification
             ->to('123456789')
             ->from('987654321')
             ->delay('00000000')
-            ->unicode()
             ->flash()
             ->details();
     }

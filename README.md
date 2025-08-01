@@ -78,7 +78,6 @@ class InvoicePaid extends Notification
 - `to(string $number)`: Set recipients number. 
 - `from(string $from)`: Set senders name.
 - `delay(string $timestamp)`: Delays message to given timestamp.
-- `unicode()`: Sets message encoding to unicode.
 - `flash()`: Sends SMS as flash message.
 
 ## Changelog

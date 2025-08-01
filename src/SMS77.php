@@ -64,7 +64,6 @@ class SMS77
      *      'text'                  => '',
      *      'from'                  => '',
      *      'delay'                 => '',
-     *      'unicode'               => '',
      *      'flash'                 => '',
      *      'udh'                   => '',
      *      'utf8'                  => '',

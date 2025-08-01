@@ -105,16 +105,6 @@ class SMS77Message
     }
 
     /**
-     * Set encoding to unicode.
-     */
-    public function unicode(): self
-    {
-        $this->payload['unicode'] = 1;
-
-        return $this;
-    }
-
-    /**
      * SMS is sent as flash message.
      */
     public function flash(): self
