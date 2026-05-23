@@ -50,5 +50,5 @@ jobs:
     - name: Upload coverage to Scrutinizer
       if: matrix.php == '8.4' && matrix.laravel == '13.*' && matrix.stability == 'prefer-stable'
       run: |
-        composer require --dev scrutinizer/ocular
-        vendor/bin/ocular code-coverage:upload --format=php-clover coverage.xml
+        wget https://scrutinizer-ci.com/ocular.phar
+        php ocular.phar code-coverage:upload --format=php-clover coverage.xml
