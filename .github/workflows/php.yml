@@ -27,7 +27,9 @@ jobs:
                     testbench: 8.*
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
+      with:
+        fetch-depth: 10
 
     - name: Set up PHP
       uses: shivammathur/setup-php@v2
@@ -49,6 +51,6 @@ jobs:
 
     - name: Upload coverage to Scrutinizer
       if: matrix.php == '8.4' && matrix.laravel == '13.*' && matrix.stability == 'prefer-stable'
-      run: |
-        wget https://scrutinizer-ci.com/ocular.phar
-        php ocular.phar code-coverage:upload --format=php-clover coverage.xml
+      uses: sudo-bot/action-scrutinizer@latest
+      with:
+        cli-args: "--format=php-clover coverage.xml --revision=${{ github.event.pull_request.head.sha || github.sha }}"
