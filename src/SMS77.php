@@ -20,8 +20,8 @@ class SMS77
      * @param  HttpClient  $http
      */
     public function __construct(
-        protected string|null $apiKey = null,
-        protected HttpClient|null $http = null
+        protected ?string $apiKey = null,
+        protected ?HttpClient $http = null
     ) {
     }
 
