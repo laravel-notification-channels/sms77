@@ -45,4 +45,10 @@ jobs:
     # Docs: https://getcomposer.org/doc/articles/scripts.md
 
     - name: Run test suite
-      run: composer run-script test
+      run: vendor/bin/phpunit --coverage-clover coverage.xml
+
+    - name: Upload coverage to Scrutinizer
+      if: matrix.php == '8.4' && matrix.laravel == '13.*' && matrix.stability == 'prefer-stable'
+      run: |
+        composer require --dev scrutinizer/ocular
+        vendor/bin/ocular code-coverage:upload --format=php-clover coverage.xml
